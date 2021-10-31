@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="DesignMaster.Default" %>
+<%@ Register Src="~/Header.ascx" TagName="PageHeader" TagPrefix="atul" %>
+<%@ Register Src="~/Footer.ascx" TagName="PageFooter" TagPrefix="atul" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+	    <script src="jquery.js"></script>
+        <link href="menu.css" rel="stylesheet" />
+        <script src="menu.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <table>
+                <tr>
+                    <td>
+                        <atul:PageHeader ID="PH" runat="server"></atul:PageHeader>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div id="menu">
+		                        <ul class="menu">
+			                        <li><a href="Login.aspx"><span>Login</span></a></li>
+                                    <li><a href="New User Registration.aspx"><span>User Sign Up</span></a></li>
+                                    <li><a href="Job_Provider_Home.aspx"><span>Company Sign Up</span></a></li>
+                                    <%-- <li><a href="New User Registration.aspx"><span>New User Registration</span></a></li>--%>
+                          
+		                        </ul>
+	                    </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="Website_Forms" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <atul:PageFooter ID="PF" runat="server"></atul:PageFooter>
+                    </td>
+                </tr>
+
+                </table> 
+        </div>
+    </form>
+</body>
+</html>

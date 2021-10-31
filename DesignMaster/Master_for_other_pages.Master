@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master_for_other_pages.master.cs" Inherits="DesignMaster.Master_for_other_pages" %>
+<%@Register TagPrefix="atul" TagName="Header_for_other_pages"  Src="~/Header.ascx" %>
+<%@Register Src="~/Footer.ascx" TagName="Footer_for_other_pages" TagPrefix="atul"%>  
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+	    <script src="jquery.js"></script>
+        <link href="menu.css" rel="stylesheet" />
+        <script src="menu.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+           <table>
+                <tr>
+                    <td>
+                        <atul:Header_for_other_pages ID="HfoP" runat="server"></atul:Header_for_other_pages>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div id="menu">
+		                        <ul class="menu">
+			                        
+                                    <li><a href="User_Home.aspx"><span>Home</span></a></li>
+                                    <li><a href="Change_password.aspx"><span></span>Change password</a></li>
+                                    <li><a href="Apply_to_jobs.aspx"><span>Apply to Jobs</span></a></li>
+                                    <li><a href="Logout.aspx"><span style="color:red">Logout</span></a></li>
+                                 <%--   <li><a href="Employee_1.aspx"><span>Employee_1</span></a></li>
+			                        <li><a href="Employee_2.aspx"><span>Employee_2</span></a></li>
+			                        <li class="last"><a href="Employee_3.aspx"><span>Employee_3</span></a></li>--%>
+		                        </ul>
+	                    </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="Website_Forms" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <atul:Footer_for_other_pages ID="FfoP" runat="server"></atul:Footer_for_other_pages>
+                    </td>
+                </tr>
+
+                </table>
+        </div>
+    </form>
+</body>
+</html>
